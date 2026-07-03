@@ -1,0 +1,121 @@
+==============================================================================================
+                                HTML CODE EXPLANATION 
+============================================================================================== 
+
+Head tag : -
+
+Body tag : 
+    - Container named main dive.
+    - two buttlen tag (1st for anti-clockwise slider & 2nd for clockwise slider).
+    - img tag for display image (empty bo'z image is add through JS).
+
+    - script tag for connect JS file with HTML.
+
+
+==============================================================================================
+                                CSS CODE EXPLANATION 
+============================================================================================== 
+
+1. Code :
+    *{
+    margin: 0;
+    padding: 0;;
+    box-sizing: border-box;
+}
+
+
+Explanation:
+
+    - margin: 0 => by default margin 0 provide to all element.
+    - padding: 0 => removing default padding from all element.
+    - box-sizing: border-box => add margin & padding in height & width.
+
+
+2. Code :
+    - body {
+    display: flex;
+}
+
+Explanation:
+
+    - for display all element horizontally.
+
+3. Code :
+    .container {
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+Explanation:
+
+    - width:100%;=> container contain full screen width. 
+    - height:100vh;=> container contain full screen height.
+    - display: flex;=> all element in containrt display horizontally.
+    - align-items: center;=> display all element in center.
+    - justify-content: space-between;=> separet both button with space between them.
+    - padding: 20px;=> give paddind to button from all sides.
+
+4. Code :
+    .btn-outline-secondary1,.btn-outline-secondary2{
+    border-radius: 50%;
+    border: none;
+    background-color: #070808;
+    opacity: 70%;
+    color: rgb(253, 249, 249);
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    z-index: 10;
+}  
+
+Explanation:
+
+    - border-radius: 50%; => to change shape of button from square to circle.
+    - border: none; => to remove of border.
+    - background-color: #070808; => give background color to button.
+    - opacity: 70%; => decrease opacity of button's background color.
+    - color: rgb(253, 249, 249); => give color to button's arrow.
+    - height: 60px; => give height to button.
+    - width: 60px; => give width to button.
+    - cursor: pointer; => chance cursor into pointer whive mouse-pointer move over the button.
+    - z-index: 10; => to get buttons over the image.
+
+
+5. Code :
+
+    .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
+
+Explanation:
+
+    - position: absolute; => to cover image in full screen.
+    - top: 0; => remove margin to the top.
+    - left: 0; => remove margin to the left.
+    - width: 100%; => give 100% width to the image.
+    - height: 100%; => give 100% height to the image.
+    - object-fit: cover; => to fix image in full screen. 
+    - z-index: 1; => put image bellow the button.
+
+
+==============================================================================================
+                                JS CODE EXPLANATION 
+==============================================================================================    
+
+1. Code :
+
+    var imgarr = ["1.png","2.png", "3.png", "4.png", "5.png", "6.png","7.png" ];
+
+var index = 0;
+
+document.querySelector('img').attributes.src.value = imgarr[index];

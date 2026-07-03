@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+.container {
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.btn-outline-secondary1,.btn-outline-secondary2{
+    border-radius: 50%;
+    border: none;
+    background-color: #070808;
+    opacity: 70%;
+    color: rgb(253, 249, 249);
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 1;
+}
